@@ -10,6 +10,7 @@ from bot.handlers.force_join import router as force_join_router
 from bot.handlers.text import router as text_router
 from bot.handlers.fonts import router as fonts_router
 from bot.handlers.decor import router as decor_router
+from bot.handlers.combo import router as combo_router
 
 
 bot = Bot(
@@ -25,3 +26,4 @@ dp.include_router(force_join_router)
 dp.include_router(text_router)
 dp.include_router(fonts_router)
 dp.include_router(decor_router)
+dp.include_router(combo_router)
