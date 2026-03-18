@@ -3,6 +3,7 @@ from aiogram.filters import CommandStart
 from aiogram.types import Message
 
 from bot.keyboards.inline import join_verify_keyboard
+from bot.config import settings
 
 router = Router()
 
@@ -18,5 +19,5 @@ async def start_handler(message: Message):
 
     await message.answer(
         text=text,
-        reply_markup=join_verify_keyboard()
+        reply_markup=join_verify_keyboard(settings.channel_username)
     )
