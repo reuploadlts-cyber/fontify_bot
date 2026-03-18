@@ -7,6 +7,7 @@ from bot.config import settings
 # import routers
 from bot.handlers.start import router as start_router
 from bot.handlers.force_join import router as force_join_router
+from bot.handlers.text import router as text_router
 
 
 bot = Bot(
@@ -19,3 +20,4 @@ dp = Dispatcher()
 # include routers
 dp.include_router(start_router)
 dp.include_router(force_join_router)
+dp.include_router(text_router)
