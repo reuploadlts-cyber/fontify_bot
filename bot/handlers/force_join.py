@@ -26,7 +26,7 @@ async def verify_join_handler(callback: CallbackQuery):
 
         await callback.message.edit_text(
             text=text,
-            reply_markup=join_verify_keyboard()
+            reply_markup=join_verify_keyboard(settings.channel_username)
         )
 
         await callback.answer("Join required ❌", show_alert=True)
