@@ -8,6 +8,7 @@ from bot.config import settings
 from bot.handlers.start import router as start_router
 from bot.handlers.force_join import router as force_join_router
 from bot.handlers.text import router as text_router
+from bot.handlers.fonts import router as fonts_router
 
 
 bot = Bot(
@@ -21,3 +22,4 @@ dp = Dispatcher()
 dp.include_router(start_router)
 dp.include_router(force_join_router)
 dp.include_router(text_router)
+dp.include_router(fonts_router)
